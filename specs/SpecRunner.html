@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Credit Card Identify Specs</title>
+    <link href="../node_modules/mocha/mocha.css" rel="stylesheet" media="screen" />
+    <script src="../node_modules/sinon/pkg/sinon-1.10.2.js"></script>
+    <script src="../bower_components/requirejs/require.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/expect.js/index.js"></script>
+</head>
+<body>
+    <div id="mocha"></div>
+    <div class="canvas"></div>
+    <script>
+        var specs = [
+            'credit-card.spec.js'
+        ];
+        require.config({
+            paths: {
+                'jquery': '../bower_components/jquery/dist/jquery',
+                'jquery.creditcard.identify':  '../index'
+            }
+        });
+        mocha.setup('bdd');
+        require( specs, function () {
+            if (window.mochaPhantomJS) {
+                mochaPhantomJS.run();
+            }
+            else {
+                mocha.run();
+            }
+        });
+    </script>
+</body>
+</html>
