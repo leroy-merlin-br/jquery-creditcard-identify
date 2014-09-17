@@ -1,0 +1,53 @@
+{
+  "name": "jquery-creditcard-identify",
+  "title": "jQuery Credit Card Identify Plugin",
+  "description": "Identify typed credit cards easy and light",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rafael Lyra",
+    "email": "rafael@rafaellyra.com",
+    "url": "http://www.rafaellyra.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leroy-merlin-br/jquery-creditcard-identify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leroy-merlin-br/jquery-creditcard-identify/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "test": "grunt specs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "matchdep": "~0.3.0",
+    "load-grunt-config": "~0.13.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "mocha": "~1.21.4",
+    "expect.js": "~0.3.1",
+    "grunt-mocha": "~0.4.11",
+    "grunt-contrib-connect": "~0.8.0",
+    "sinon": "~1.10.3",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-release": "~0.7.0"
+  },
+  "keywords": [
+    "creditcard",
+    "cards",
+    "card",
+    "credit",
+    "identify",
+    "validation",
+    "validate",
+    "checkout",
+    "payment",
+    "ecommerce"
+  ]
+}
