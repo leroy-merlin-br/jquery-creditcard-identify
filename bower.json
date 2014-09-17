@@ -1,0 +1,36 @@
+{
+	"name": "jquery-creditcard-identify",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:leroy-merlin-br/jquery-creditcard-identify.git"
+	},
+	"authors": [
+		"Rafael Lyra <rafael@rafaellyra.com>"
+	],
+	"description": "Identify typed credit cards easy and light",
+	"main": "dist/jquery.creditcard-identify.min.js",
+	"keywords": [
+		"creditcard",
+		"cards",
+		"card",
+		"credit",
+		"identify",
+		"validation",
+		"validate",
+		"checkout",
+		"payment",
+		"ecommerce"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"specs",
+		"grunt"
+	],
+	"dependencies": {
+		"jquery": ">= 1.11.1",
+    	"requirejs": "2.1.8"
+	}
+}
