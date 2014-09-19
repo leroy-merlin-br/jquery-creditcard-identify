@@ -1,6 +1,6 @@
 # jQuery Credit Card Identify
 
-An plugin to identify typed credit cards easy and light
+A plugin to identify typed credit cards easy and light
 
 
 # How to use
