@@ -2,8 +2,32 @@
 
 A plugin to identify typed credit cards easy and light
 
+# Getting Started
+
+## Downloading the prebuilt files
+
+Get the latest release here: https://github.com/leroy-merlin-br/jquery-creditcard-identify/releases
 
 # How to use
+
+```html
+<form>
+    <input id="credit_card">
+</form>
+<script src="jquery.js"></script>
+<script src="jquery-creditcard-identify.js"></script>
+<script>
+var detect = $('#credit_card').detectCreditCard();
+</script>
+```
+
+Alternatively include jQuery and the plugin via requirejs in your module.
+
+```javascript
+define(["jquery", "jquery-creditcard-identify"], function( $ ) {
+    var detect = $('#credit_card').detectCreditCard();
+});
+```
 
 ## You need to pass all card patterns to the plugin:
 
