@@ -8,6 +8,12 @@ A plugin to identify typed credit cards easy and light
 
 Get the latest release here: https://github.com/leroy-merlin-br/jquery-creditcard-identify/releases
 
+or install with bower:
+
+```terminal
+bower install jquery-creditcard-identify
+```
+
 # How to use
 
 ```html
