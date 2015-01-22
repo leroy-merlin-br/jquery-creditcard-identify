@@ -14,21 +14,35 @@
         options = options || {
             cards: []
         };
+
         cards = options.cards;
+
         function Card(element) {
             this.cardInfo = null;
             this.cardNumber = null;
             this.cardsLength = cards.length;
             this.element = element;
         }
+
         Card.prototype.init = function () {
             this.element.on('keyup', $.proxy(this.onKeyUp, this));
+            this.element.on('setCard', $.proxy(this.setCard, this));
             this.changeCardNumber(this.element.val());
+
             return this;
         };
+
+        Card.prototype.setCard = function (ev, cardName) {
+            this.cardInfo = {
+                name: cardName
+            };
+            this.element.addClass(cardName);
+        };
+
         Card.prototype.onKeyUp = function (event) {
             this.changeCardNumber(event.currentTarget.value);
         };
+
         Card.prototype.changeCardNumber = function (value) {
             this.cardNumber = value || null;
             if (this.cardNumber) {
@@ -38,6 +52,7 @@
                 this.element.removeClass(this.cardInfo.name);
             }
         };
+
         Card.prototype.testCardType = function (cardNumber) {
             var i = 0, pattern;
             cardNumber = cardNumber.replace(/\D/g, '');
@@ -52,11 +67,14 @@
                 }
             }
         };
+
         Card.prototype.addCardPattern = function (pattern) {
             cards.push(pattern);
             this.cardsLength = cards.length;
         };
+
         detect = new Card(this).init();
+
         return detect;
     };
 }));
