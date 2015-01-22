@@ -10,7 +10,7 @@ define(function () {
     },
     {
         name: 'mastercard',
-        pattern: /^5[0-5]/
+        pattern: /^5[1-5]/
     },
     {
         name: 'celebre',
