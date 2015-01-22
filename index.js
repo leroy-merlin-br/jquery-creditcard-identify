@@ -33,9 +33,14 @@
         };
 
         Card.prototype.setCard = function (ev, cardName) {
+            if (this.cardInfo && this.cardInfo.name) {
+                this.element.removeClass(this.cardInfo.name);
+            }
+
             this.cardInfo = {
                 name: cardName
             };
+
             this.element.addClass(cardName);
         };
 
@@ -45,27 +50,35 @@
 
         Card.prototype.changeCardNumber = function (value) {
             this.cardNumber = value || null;
+
             if (this.cardNumber) {
                 this.testCardType(this.cardNumber);
                 this.element.trigger('change:card', this.cardInfo);
             } else if (this.cardInfo && this.cardInfo.name) {
                 this.element.removeClass(this.cardInfo.name);
             }
+
         };
 
         Card.prototype.testCardType = function (cardNumber) {
             var i = 0, pattern;
             cardNumber = cardNumber.replace(/\D/g, '');
+
             for (i; i < this.cardsLength; i += 1) {
                 pattern = cards[i].pattern;
+
                 if (cardNumber.match(pattern)) {
+
                     if (this.cardInfo && this.cardInfo.name) {
                         this.element.removeClass(this.cardInfo.name);
                     }
+
                     this.cardInfo = cards[i];
                     this.element.addClass(this.cardInfo.name);
                 }
+
             }
+
         };
 
         Card.prototype.addCardPattern = function (pattern) {
