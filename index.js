@@ -33,7 +33,7 @@
             this.cardNumber = value || null;
             if (this.cardNumber) {
                 this.testCardType(this.cardNumber);
-                this.element.trigger('change:card');
+                this.element.trigger('change:card', this.cardInfo);
             } else if (this.cardInfo && this.cardInfo.name) {
                 this.element.removeClass(this.cardInfo.name);
             }
